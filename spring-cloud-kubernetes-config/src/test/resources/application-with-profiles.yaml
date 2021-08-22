@@ -1,0 +1,18 @@
+bean:
+  greeting: "Hello ConfigMap default, %s!"
+  farewell: "Goodbye ConfigMap default, %s!"
+---
+spring:
+  profiles: development
+bean:
+  greeting: "Hello ConfigMap dev, %s!"
+---
+spring:
+  profiles: production
+bean:
+  greeting: "Hello ConfigMap prod, %s!"
+---
+spring:
+  profiles: production & us-east
+bean:
+  greeting: "Hello ConfigMap production and us-east, %s!"
